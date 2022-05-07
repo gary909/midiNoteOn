@@ -7,7 +7,7 @@ void setup() {
 
 void loop() {
   // Play a chromatic scale starting on middle C (60)
-  for(int note = 60; note < 60; note++) {
+  for(int note = 60; note < 60 + 12s; note++) {
     //play a note
     playMIDINote(1, note, 100);
     //pause
