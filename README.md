@@ -38,4 +38,4 @@ Push Buttons use 10k
 
 ______________________________________________________________________________
 
-[midi notes](midi_notes.jpg)
+![midi notes](midi_notes.jpg)
