@@ -24,6 +24,10 @@ MIDI note on
     Ascii text from: http://patorjk.com/ using 'Ogre' font
 */
 
+
+____________________________________________________________________________
+
+
 Octave Buttons:
 Up and Down button to choose octaves.  x1 LED status indicator (changes brightness)
 LED use 1k resistor
@@ -31,3 +35,7 @@ Push Buttons use 10k
 - To Do:  Add to MIDI Keyboard code / refactor / Speed up etc
 
 ![arduino_Octave_Buttons](arduino_Octave_Buttons.jpg)
+
+______________________________________________________________________________
+
+[midi notes](midi_notes.jpg)
