@@ -17,15 +17,16 @@
                                                   
  */
 
-// V1.0
-// What is it? 2 Octave buttons to be added to the MIDI keyboard.  An LED is used to show octave via brightness
-// implement; Serial print - Done // LED Done // LED Brightness - Done // Debounce - Done // Link to MIDI keyboard
-// Buttons use 10k resistors to ground, LED uses 1k.
-
+/* V1.01 Changed LED resister value to 270 Ohm...  a little bit clearer now
+   V1
+   What is it? 2 Octave buttons to be added to the MIDI keyboard.  An LED is used to show octave via brightness
+   implement; Serial print - Done // LED Done // LED Brightness - Done // Debounce - Done // Link to MIDI keyboard
+   Buttons use 10k resistors to ground, LED uses 270 Ohm.
+*/
 const int  octUpButton = 2;       // Octave Up pushbutton
 const int  octDwnButton = 3;      // Octave Down pushbutton
 const int octLED = 5;             // LED on pin 5 (~pwm pin)
-int octLED_Brightness[] = {0, 30, 60, 90, 127}; // brightness for 0,1,2,3,4 octaves
+int octLED_Brightness[] = {0, 20, 65, 120, 255}; // brightness for 0,1,2,3,4 octaves
 int octButtonPushCounter = 2;     // counter for the number of button presses, 2 to start in middle octave
 int octUpButtonState = 0;         // current state Up button
 int octDwnButtonState = 0;        // current state of Down button
