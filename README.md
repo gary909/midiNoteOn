@@ -1,5 +1,8 @@
 "# midiNoteOn" 
 
+Arp Version (still rough)
+![arduino Arp midi keyboard](arp_keys.jpg)
+
 MIDI note on
 
 ![Arduino Midi Keyboard new version](newKeys.jpg)
