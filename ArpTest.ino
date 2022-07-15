@@ -325,7 +325,7 @@ void HandleClock () {
 /**********************************************************************************************************_Void_Loop()_**/
 
 void loop() {
-/********************************************************************_KEYBOARD_CODE_LOOP_*********************************/                                 
+  /********************************************************************_KEYBOARD_CODE_LOOP_*********************************/                                 
   static bool button1_LowC_valueOld = LOW;
   static bool button2_Csharp_valueOld = LOW;
   static bool button3_D_valueOld = LOW;
@@ -355,158 +355,158 @@ void loop() {
   bool button13_C_valueNew = digitalRead(button13_C_pin);
   
       ////////////////// Low C //////////////    
-    if (button1_LowC_valueNew != button1_LowC_valueOld){
-      if (button1_LowC_valueNew == HIGH){
-      //MIDI.sendNoteOn(48, 127, midiChannel); // "Note low C On"
-      MIDI.sendNoteOn(octaveSelected[octButtonPushCounter][0], 127, midiChannel); // "Note low C On"
-      delay(60);
-      } else {
-      //MIDI.sendNoteOff(48, 0, midiChannel); // "Note low C off"
-      MIDI.sendNoteOff(octaveSelected[octButtonPushCounter][0], 0, midiChannel); // "Note low C off"
-      delay(60);
-      }  
-      button1_LowC_valueOld = button1_LowC_valueNew;
+  if (button1_LowC_valueNew != button1_LowC_valueOld){
+    if (button1_LowC_valueNew == HIGH){
+    //MIDI.sendNoteOn(48, 127, midiChannel); // "Note low C On"
+    MIDI.sendNoteOn(octaveSelected[octButtonPushCounter][0], 127, midiChannel); // "Note low C On"
+    delay(60);
+    } else {
+    //MIDI.sendNoteOff(48, 0, midiChannel); // "Note low C off"
+    MIDI.sendNoteOff(octaveSelected[octButtonPushCounter][0], 0, midiChannel); // "Note low C off"
+    delay(60);
+    }  
+    button1_LowC_valueOld = button1_LowC_valueNew;
+  }
+  
+    ////////////////// C Sharp //////////////    
+  if (button2_Csharp_valueNew != button2_Csharp_valueOld){ 
+    if (button2_Csharp_valueNew == HIGH){  
+    //MIDI.sendNoteOn(49, 127, 1); //  "Note C sharp On"
+    MIDI.sendNoteOn(octaveSelected[octButtonPushCounter][1], 127, 1); //  "Note C sharp On"
+    } else {
+    MIDI.sendNoteOff(octaveSelected[octButtonPushCounter][1], 0, 1); //"Note C Sharp Off"
     }
-    
-      ////////////////// C Sharp //////////////    
-    if (button2_Csharp_valueNew != button2_Csharp_valueOld){ 
-      if (button2_Csharp_valueNew == HIGH){  
-      //MIDI.sendNoteOn(49, 127, 1); //  "Note C sharp On"
-      MIDI.sendNoteOn(octaveSelected[octButtonPushCounter][1], 127, 1); //  "Note C sharp On"
-      } else {
-      MIDI.sendNoteOff(octaveSelected[octButtonPushCounter][1], 0, 1); //"Note C Sharp Off"
-      }
-      button2_Csharp_valueOld = button2_Csharp_valueNew;
-    }
+    button2_Csharp_valueOld = button2_Csharp_valueNew;
+  }
 
-      ////////////////// D //////////////    
-    if (button3_D_valueNew != button3_D_valueOld){ 
-      if (button3_D_valueNew == HIGH){  
-      //MIDI.sendNoteOn(50, 127, 1); //  "Note D On"
-      MIDI.sendNoteOn(octaveSelected[octButtonPushCounter][2], 127, 1); //  "Note D On"
-      } else {
-      MIDI.sendNoteOff(octaveSelected[octButtonPushCounter][2], 0, 1); //"Note D Off"
-      }
-      button3_D_valueOld = button3_D_valueNew;
+    ////////////////// D //////////////    
+  if (button3_D_valueNew != button3_D_valueOld){ 
+    if (button3_D_valueNew == HIGH){  
+    //MIDI.sendNoteOn(50, 127, 1); //  "Note D On"
+    MIDI.sendNoteOn(octaveSelected[octButtonPushCounter][2], 127, 1); //  "Note D On"
+    } else {
+    MIDI.sendNoteOff(octaveSelected[octButtonPushCounter][2], 0, 1); //"Note D Off"
     }
+    button3_D_valueOld = button3_D_valueNew;
+  }
 
-       ////////////////// D sharp //////////////    
-    if (button4_Dsharp_valueNew != button4_Dsharp_valueOld){ 
-      if (button4_Dsharp_valueNew == HIGH){  
-      //MIDI.sendNoteOn(51, 127, 1); //  "Note D# On"
-      MIDI.sendNoteOn(octaveSelected[octButtonPushCounter][3], 127, 1); //  "Note D# On"
-      } else {
-      MIDI.sendNoteOff(octaveSelected[octButtonPushCounter][3], 0, 1); //"Note D# Off"
-      }
-      button4_Dsharp_valueOld = button4_Dsharp_valueNew;
+      ////////////////// D sharp //////////////    
+  if (button4_Dsharp_valueNew != button4_Dsharp_valueOld){ 
+    if (button4_Dsharp_valueNew == HIGH){  
+    //MIDI.sendNoteOn(51, 127, 1); //  "Note D# On"
+    MIDI.sendNoteOn(octaveSelected[octButtonPushCounter][3], 127, 1); //  "Note D# On"
+    } else {
+    MIDI.sendNoteOff(octaveSelected[octButtonPushCounter][3], 0, 1); //"Note D# Off"
     }
+    button4_Dsharp_valueOld = button4_Dsharp_valueNew;
+  }
 
-       ////////////////// E //////////////    
-    if (button5_E_valueNew != button5_E_valueOld){ 
-      if (button5_E_valueNew == HIGH){  
-      //MIDI.sendNoteOn(52, 127, 1); //  "Note E On"
-      MIDI.sendNoteOn(octaveSelected[octButtonPushCounter][4], 127, 1); //  "Note E On"
-      } else {
-      MIDI.sendNoteOff(octaveSelected[octButtonPushCounter][4], 0, 1); //"Note E Off"
-      }
-      button5_E_valueOld = button5_E_valueNew;
+      ////////////////// E //////////////    
+  if (button5_E_valueNew != button5_E_valueOld){ 
+    if (button5_E_valueNew == HIGH){  
+    //MIDI.sendNoteOn(52, 127, 1); //  "Note E On"
+    MIDI.sendNoteOn(octaveSelected[octButtonPushCounter][4], 127, 1); //  "Note E On"
+    } else {
+    MIDI.sendNoteOff(octaveSelected[octButtonPushCounter][4], 0, 1); //"Note E Off"
     }
+    button5_E_valueOld = button5_E_valueNew;
+  }
 
-       ////////////////// F //////////////    
-    if (button6_F_valueNew != button6_F_valueOld){ 
-      if (button6_F_valueNew == HIGH){  
-      //MIDI.sendNoteOn(53, 127, 1); //  "Note F On"
-      MIDI.sendNoteOn(octaveSelected[octButtonPushCounter][5], 127, 1); //  "Note F On"
-      } else {
-      MIDI.sendNoteOff(octaveSelected[octButtonPushCounter][5], 0, 1); //"Note F Off"
-      }
-      button6_F_valueOld = button6_F_valueNew;
+      ////////////////// F //////////////    
+  if (button6_F_valueNew != button6_F_valueOld){ 
+    if (button6_F_valueNew == HIGH){  
+    //MIDI.sendNoteOn(53, 127, 1); //  "Note F On"
+    MIDI.sendNoteOn(octaveSelected[octButtonPushCounter][5], 127, 1); //  "Note F On"
+    } else {
+    MIDI.sendNoteOff(octaveSelected[octButtonPushCounter][5], 0, 1); //"Note F Off"
     }
+    button6_F_valueOld = button6_F_valueNew;
+  }
 
-      ////////////////// F# //////////////    
-    if (button7_Fsharp_valueNew != button7_Fsharp_valueOld){ 
-      if (button7_Fsharp_valueNew == HIGH){  
-      //MIDI.sendNoteOn(54, 127, 1); //  "Note F# On"
-      MIDI.sendNoteOn(octaveSelected[octButtonPushCounter][6], 127, 1); //  "Note F# On"
-      } else {
-      MIDI.sendNoteOff(octaveSelected[octButtonPushCounter][6], 0, 1); //"Note F# Off"
-      }
-      button7_Fsharp_valueOld = button7_Fsharp_valueNew;
+    ////////////////// F# //////////////    
+  if (button7_Fsharp_valueNew != button7_Fsharp_valueOld){ 
+    if (button7_Fsharp_valueNew == HIGH){  
+    //MIDI.sendNoteOn(54, 127, 1); //  "Note F# On"
+    MIDI.sendNoteOn(octaveSelected[octButtonPushCounter][6], 127, 1); //  "Note F# On"
+    } else {
+    MIDI.sendNoteOff(octaveSelected[octButtonPushCounter][6], 0, 1); //"Note F# Off"
     }
+    button7_Fsharp_valueOld = button7_Fsharp_valueNew;
+  }
 
-       ////////////////// G //////////////    
-    if (button8_G_valueNew != button8_G_valueOld){ 
-      if (button8_G_valueNew == HIGH){  
-      //MIDI.sendNoteOn(55, 127, 1); //  "Note G On"
-      MIDI.sendNoteOn(octaveSelected[octButtonPushCounter][7], 127, 1); //  "Note G On"
-      } else {
-      MIDI.sendNoteOff(octaveSelected[octButtonPushCounter][7], 0, 1); //"Note G Off"
-      }
-      button8_G_valueOld = button8_G_valueNew;
+      ////////////////// G //////////////    
+  if (button8_G_valueNew != button8_G_valueOld){ 
+    if (button8_G_valueNew == HIGH){  
+    //MIDI.sendNoteOn(55, 127, 1); //  "Note G On"
+    MIDI.sendNoteOn(octaveSelected[octButtonPushCounter][7], 127, 1); //  "Note G On"
+    } else {
+    MIDI.sendNoteOff(octaveSelected[octButtonPushCounter][7], 0, 1); //"Note G Off"
     }
+    button8_G_valueOld = button8_G_valueNew;
+  }
 
-      ////////////////// G# //////////////    
-    if (button9_Gsharp_valueNew != button9_Gsharp_valueOld){ 
-      if (button9_Gsharp_valueNew == HIGH){  
-      //MIDI.sendNoteOn(56, 127, 1); //  "Note G# On"
-      MIDI.sendNoteOn(octaveSelected[octButtonPushCounter][8], 127, 1); //  "Note G# On"
-      } else {
-      MIDI.sendNoteOff(octaveSelected[octButtonPushCounter][8], 0, 1); //"Note G# Off"
-      }
-      button9_Gsharp_valueOld = button9_Gsharp_valueNew;
+    ////////////////// G# //////////////    
+  if (button9_Gsharp_valueNew != button9_Gsharp_valueOld){ 
+    if (button9_Gsharp_valueNew == HIGH){  
+    //MIDI.sendNoteOn(56, 127, 1); //  "Note G# On"
+    MIDI.sendNoteOn(octaveSelected[octButtonPushCounter][8], 127, 1); //  "Note G# On"
+    } else {
+    MIDI.sendNoteOff(octaveSelected[octButtonPushCounter][8], 0, 1); //"Note G# Off"
     }
+    button9_Gsharp_valueOld = button9_Gsharp_valueNew;
+  }
 
-      ////////////////// A //////////////    
-    if (button10_A_valueNew != button10_A_valueOld){ 
-      if (button10_A_valueNew == HIGH){  
-      //MIDI.sendNoteOn(57, 127, 1); //  "Note A On"
-      MIDI.sendNoteOn(octaveSelected[octButtonPushCounter][9], 127, 1); //  "Note A On"
-      } else {
-      MIDI.sendNoteOff(octaveSelected[octButtonPushCounter][9], 0, 1); //"Note A Off"
-      }
-      button10_A_valueOld = button10_A_valueNew;
+    ////////////////// A //////////////    
+  if (button10_A_valueNew != button10_A_valueOld){ 
+    if (button10_A_valueNew == HIGH){  
+    //MIDI.sendNoteOn(57, 127, 1); //  "Note A On"
+    MIDI.sendNoteOn(octaveSelected[octButtonPushCounter][9], 127, 1); //  "Note A On"
+    } else {
+    MIDI.sendNoteOff(octaveSelected[octButtonPushCounter][9], 0, 1); //"Note A Off"
     }
+    button10_A_valueOld = button10_A_valueNew;
+  }
 
-      ////////////////// A# //////////////    
-    if (button11_Asharp_valueNew != button11_Asharp_valueOld){ 
-      if (button11_Asharp_valueNew == HIGH){  
-      //MIDI.sendNoteOn(58, 127, 1); //  "Note A# On"
-      MIDI.sendNoteOn(octaveSelected[octButtonPushCounter][10], 127, 1); //  "Note A# On"
-      } else {
-      MIDI.sendNoteOff(octaveSelected[octButtonPushCounter][10], 0, 1); //"Note A# Off"
-      }
-      button11_Asharp_valueOld = button11_Asharp_valueNew;
+    ////////////////// A# //////////////    
+  if (button11_Asharp_valueNew != button11_Asharp_valueOld){ 
+    if (button11_Asharp_valueNew == HIGH){  
+    //MIDI.sendNoteOn(58, 127, 1); //  "Note A# On"
+    MIDI.sendNoteOn(octaveSelected[octButtonPushCounter][10], 127, 1); //  "Note A# On"
+    } else {
+    MIDI.sendNoteOff(octaveSelected[octButtonPushCounter][10], 0, 1); //"Note A# Off"
     }
+    button11_Asharp_valueOld = button11_Asharp_valueNew;
+  }
 
-      ////////////////// B //////////////    
-    if (button12_B_valueNew != button12_B_valueOld){ 
-      if (button12_B_valueNew == HIGH){  
-      //MIDI.sendNoteOn(59, 127, 1); //  "Note B On"
-      MIDI.sendNoteOn(octaveSelected[octButtonPushCounter][11], 127, 1); //  "Note B On"
-      } else {
-      MIDI.sendNoteOff(octaveSelected[octButtonPushCounter][11], 0, 1); //"Note B Off"
-      }
-      button12_B_valueOld = button12_B_valueNew;
+    ////////////////// B //////////////    
+  if (button12_B_valueNew != button12_B_valueOld){ 
+    if (button12_B_valueNew == HIGH){  
+    //MIDI.sendNoteOn(59, 127, 1); //  "Note B On"
+    MIDI.sendNoteOn(octaveSelected[octButtonPushCounter][11], 127, 1); //  "Note B On"
+    } else {
+    MIDI.sendNoteOff(octaveSelected[octButtonPushCounter][11], 0, 1); //"Note B Off"
     }
+    button12_B_valueOld = button12_B_valueNew;
+  }
 
-      ////////////////// C //////////////    
-    if (button13_C_valueNew != button13_C_valueOld){ 
-      if (button13_C_valueNew == HIGH){  
-      //MIDI.sendNoteOn(60, 127, 1); //  "Note C On"
-      MIDI.sendNoteOn(octaveSelected[octButtonPushCounter + 1][0], 127, 1); //  "Note C On" *One octave higher than low C, 
-                                                                            //  so add + 1 to octButtonPushCounter
-      } else {
-      MIDI.sendNoteOff(octaveSelected[octButtonPushCounter + 1][0], 0, 1); //"Note F Off"
-      }
-      button13_C_valueOld = button13_C_valueNew;
+    ////////////////// C //////////////    
+  if (button13_C_valueNew != button13_C_valueOld){ 
+    if (button13_C_valueNew == HIGH){  
+    //MIDI.sendNoteOn(60, 127, 1); //  "Note C On"
+    MIDI.sendNoteOn(octaveSelected[octButtonPushCounter + 1][0], 127, 1); //  "Note C On" *One octave higher than low C, 
+                                                                          //  so add + 1 to octButtonPushCounter
+    } else {
+    MIDI.sendNoteOff(octaveSelected[octButtonPushCounter + 1][0], 0, 1); //"Note F Off"
     }
-/********************************************************************END_OF_KEYBOARD_CODE_LOOP_*****************************/    
+    button13_C_valueOld = button13_C_valueNew;
+  }
+    /********************************************************************END_OF_KEYBOARD_CODE_LOOP_*****************************/    
 
-/********************************************************************_OCTAVE_BUTTONS_CODE_LOOP_*****************************/ 
-   octUpButtonState = digitalRead(octUpButton);       // read the pushbutton up input pin:  
-   if (octUpButtonState != octLastButtonState) {      // compare the buttonState to its previous state
-     if (octUpButtonState == HIGH)                    // if the state has changed, increment the counter  
-     {
+    /********************************************************************_OCTAVE_BUTTONS_CODE_LOOP_*****************************/ 
+  octUpButtonState = digitalRead(octUpButton);       // read the pushbutton up input pin:  
+  if (octUpButtonState != octLastButtonState) {      // compare the buttonState to its previous state
+    if (octUpButtonState == HIGH)                    // if the state has changed, increment the counter  
+    {
       if (octButtonPushCounter == 0){                 // ********  Octave 1  *******
         octButtonPushCounter++;
         octaveSelected[1][0];
@@ -533,14 +533,14 @@ void loop() {
           delay(250);
           analogWrite(octLED, octLED_Brightness[5]);  // change LED brightness UP
       }    
-     }
-   }  
-   octLastButtonState = octUpButtonState;             // save the current state as the last state, for next time through the loop  
-   
-   octDwnButtonState = digitalRead(octDwnButton);     // read the pushbutton down input pin:
-   if (octDwnButtonState != octLastButtonState) {     // compare the buttonState to its previous state
-     if (octDwnButtonState == HIGH)                   // if the state has changed, decrement the counter
-     {
+    }
+  }  
+  octLastButtonState = octUpButtonState;             // save the current state as the last state, for next time through the loop  
+  
+  octDwnButtonState = digitalRead(octDwnButton);     // read the pushbutton down input pin:
+  if (octDwnButtonState != octLastButtonState) {     // compare the buttonState to its previous state
+    if (octDwnButtonState == HIGH)                   // if the state has changed, decrement the counter
+    {
       if (octButtonPushCounter == 5){                 // ********  Octave 4  *******
       octButtonPushCounter--;
       octaveSelected[4][0];
@@ -567,13 +567,13 @@ void loop() {
           delay(250);
           analogWrite(octLED, octLED_Brightness[0]);  // change LED brightness DOWN
       }
-     }           
-   }
-   octLastButtonState = octDwnButtonState;    
-/********************************************************************END_OF_OCTAVE_BUTTONS_CODE_LOOP_**********************/ 
+    }           
+  }
+  octLastButtonState = octDwnButtonState;    
+   /********************************************************************END_OF_OCTAVE_BUTTONS_CODE_LOOP_**********************/ 
 
 
-/***********************************************START_OF_ARP_CODE_LOOP_*************/
+   /***********************************************START_OF_ARP_CODE_LOOP_*************/
 
   MIDI.read();
 
@@ -584,7 +584,7 @@ void loop() {
 
   handleButtonOne();
   handleButtonTwo();
-//  handleButtonThree();
+  //  handleButtonThree();
 
   // if not in  clock synch mode, we just read the tempo from the
   // tempo knob. 
@@ -597,233 +597,235 @@ void loop() {
 
 }
 
-void handleTick(unsigned long tick) {
+  /*************************************************END_OF_ARP_CODE_LOOP_*************/
 
-  // leave the LED long enough to be brightish but not so long
-  // that it ends up being solid instead of blinking
-  if (blinkOn && tick - blinkTime > 10) {
-    blinkOn=false;
-    digitalWrite(STAT1,HIGH); // stupid midi shield has high/low backwards for the LEDs
-  }
-  if (clockSync || tick - lastTime > tempo) {
-    blinkTime = lastTime = tick;
-    digitalWrite(STAT1,LOW); // stupid midi shield has high/low backwards for the LEDs
-    blinkOn = true;
+  void handleTick(unsigned long tick) {
+
+    // leave the LED long enough to be brightish but not so long
+    // that it ends up being solid instead of blinking
+    if (blinkOn && tick - blinkTime > 10) {
+      blinkOn=false;
+      digitalWrite(STAT1,HIGH); // stupid midi shield has high/low backwards for the LEDs
+    }
+    if (clockSync || tick - lastTime > tempo) {
+      blinkTime = lastTime = tick;
+      digitalWrite(STAT1,LOW); // stupid midi shield has high/low backwards for the LEDs
+      blinkOn = true;
 
 
-    if ((hold || notesHeld > 0) && notes[0] != '\0') { 
+      if ((hold || notesHeld > 0) && notes[0] != '\0') { 
 
 
-      // stop the previous note
-      // MIDI.sendNoteOff(notes[playBeat],0,CHANNEL);
+        // stop the previous note
+        // MIDI.sendNoteOff(notes[playBeat],0,CHANNEL);
 
-      // fixes a bug where a random note would sometimes get played when switching chords
-      if (notes[playBeat] == '\0')
-        playBeat = 0;
+        // fixes a bug where a random note would sometimes get played when switching chords
+        if (notes[playBeat] == '\0')
+          playBeat = 0;
 
-      // play the current note
-      MIDI.sendNoteOn(notes[playBeat],velocity(),CHANNEL);
+        // play the current note
+        MIDI.sendNoteOn(notes[playBeat],velocity(),CHANNEL);
 
-      // decide what the next note is based on the mode.
-      if (mode == UP) 
-        up();
-      else if (mode == DOWN) 
-        down();
-      else if (mode == BOUNCE) 
-        bounce();
-      else if (mode == UPDOWN) 
-        upDown();
-      else if (mode == ONETHREE)
-        oneThree();
-      else if (mode == ONETHREEEVEN)
-        oneThreeEven();
+        // decide what the next note is based on the mode.
+        if (mode == UP) 
+          up();
+        else if (mode == DOWN) 
+          down();
+        else if (mode == BOUNCE) 
+          bounce();
+        else if (mode == UPDOWN) 
+          upDown();
+        else if (mode == ONETHREE)
+          oneThree();
+        else if (mode == ONETHREEEVEN)
+          oneThreeEven();
 
+      }
     }
   }
-}
 
 
-int velocity() {
-  int velocity = 127 - analogRead(0)/8;
+  int velocity() {
+    int velocity = 127 - analogRead(0)/8;
 
-  // don't let it totally zero out.
-  if (velocity == 0)
-    velocity++;
+    // don't let it totally zero out.
+    if (velocity == 0)
+      velocity++;
 
-  return velocity;
+    return velocity;
 
-}
+  }
 
-void up() {
-  playBeat++;
-  if (notes[playBeat] == '\0')
-    playBeat=0;     
-}
+  void up() {
+    playBeat++;
+    if (notes[playBeat] == '\0')
+      playBeat=0;     
+  }
 
-void down() {
-  if (playBeat == 0) {
-    playBeat = sizeof(notes)-1;
-    while (notes[playBeat] == '\0') {
+  void down() {
+    if (playBeat == 0) {
+      playBeat = sizeof(notes)-1;
+      while (notes[playBeat] == '\0') {
+        playBeat--;
+      }
+    }        
+    else       
       playBeat--;
-    }
-  }        
-  else       
-    playBeat--;
-}
-
-
-void bounce() {
-  if (sizeof(notes) == 1)
-    playBeat=0;
-  else
-    if (arpUp) {
-      if (notes[playBeat+1] == '\0') {
-        arpUp = false;           
-        playBeat--;
-      }    
-      else
-        playBeat++;   
-    }
-    else {
-      if (playBeat == 0) {
-        arpUp = true;
-        playBeat++;
-      }
-      else
-        playBeat--;
-    }
-}
-
-
-void upDown() {
-  if (sizeof(notes) == 1)
-    playBeat=0;
-  else
-    if (arpUp) {
-      if (notes[playBeat+1] == '\0') {
-        arpUp = false;           
-      }    
-      else
-        playBeat++;   
-    }
-    else {
-      if (playBeat == 0) {
-        arpUp = true;
-      }
-      else
-        playBeat--;
-    }
-}
-
-void oneThree() {
-  if (arpUp)
-    playBeat += 2;
-  else
-    playBeat--;
-
-  arpUp = !arpUp;
-
-  if (notes[playBeat] == '\0') {
-    playBeat = 0;
-    arpUp = true;
-  }
-}
-
-void oneThreeEven() {
-
-  if (notes[playBeat+1] == '\0') {
-    playBeat = 0;
-    arpUp = true;
-    return;
   }
 
 
-  if (arpUp)
-    playBeat += 2;
-  else
-    playBeat--;
-
-  arpUp = !arpUp;
-
-
-}
-
-// empties out the arpeggio. used when switching modes, when in hold mode and
-// a new arpeggio is started, or when the reset button is pushed.
-void resetNotes() {
-  for (int i = 0; i < sizeof(notes); i++)
-    notes[i] = '\0';
-}
-
-
-// Basic code to read the buttons.
-char button(char button_num)
-{
-  return (!(digitalRead(button_num)));
-}
-
-
-// Button one is the the Hold button.
-void handleButtonOne() {
-  boolean buttonOnePressed = button(BUTTON1);
-  if (buttonOnePressed) {
-    if (buttonOneHeldTime == 0)
-      buttonOneHeldTime = tick;
-
-    if (!buttonOneDown && (tick - buttonOneHeldTime > debounceTime)) {
-      buttonOneDown = true;
-      hold = !hold;
-      resetNotes();
-    }
-  }
-  else {
-    buttonOneDown = false;
-    buttonOneHeldTime = 0;
-  }
-}
-
-// Button two is the mode button.
-void handleButtonTwo() {
-  boolean buttonTwoPressed = button(BUTTON2);
-  if (buttonTwoPressed) {
-    if (buttonTwoHeldTime == 0)
-      buttonTwoHeldTime = tick;
-
-    if (!buttonTwoDown && (tick - buttonTwoHeldTime > debounceTime)) {
-      buttonTwoDown = true;
+  void bounce() {
+    if (sizeof(notes) == 1)
       playBeat=0;
-      mode++;
-      if (mode == MODES) {
-        mode=0;
+    else
+      if (arpUp) {
+        if (notes[playBeat+1] == '\0') {
+          arpUp = false;           
+          playBeat--;
+        }    
+        else
+          playBeat++;   
       }
-      arpUp = true;
+      else {
+        if (playBeat == 0) {
+          arpUp = true;
+          playBeat++;
+        }
+        else
+          playBeat--;
+      }
+  }
 
+
+  void upDown() {
+    if (sizeof(notes) == 1)
+      playBeat=0;
+    else
+      if (arpUp) {
+        if (notes[playBeat+1] == '\0') {
+          arpUp = false;           
+        }    
+        else
+          playBeat++;   
+      }
+      else {
+        if (playBeat == 0) {
+          arpUp = true;
+        }
+        else
+          playBeat--;
+      }
+  }
+
+  void oneThree() {
+    if (arpUp)
+      playBeat += 2;
+    else
+      playBeat--;
+
+    arpUp = !arpUp;
+
+    if (notes[playBeat] == '\0') {
+      playBeat = 0;
+      arpUp = true;
     }
   }
-  else {
-    buttonTwoDown = false;
-    buttonTwoHeldTime = 0;
+
+  void oneThreeEven() {
+
+    if (notes[playBeat+1] == '\0') {
+      playBeat = 0;
+      arpUp = true;
+      return;
+    }
+
+
+    if (arpUp)
+      playBeat += 2;
+    else
+      playBeat--;
+
+    arpUp = !arpUp;
+
+
   }
-}
 
-// button three is the reset button
-//void handleButtonThree() {
-//  boolean buttonThreePressed = button(BUTTON3);
-//  if (buttonThreePressed) {
-//    if (buttonThreeHeldTime == 0)
-//      buttonThreeHeldTime = tick;
-//
-//    if (!buttonThreeDown && (tick - buttonThreeHeldTime > debounceTime)) {
-//
-//      buttonThreeDown = true;
-//      resetNotes();
-//    }
-//  }
-//  else {
-//    buttonThreeDown = false;
-//    buttonThreeHeldTime = 0;
-//  }
+  // empties out the arpeggio. used when switching modes, when in hold mode and
+  // a new arpeggio is started, or when the reset button is pushed.
+  void resetNotes() {
+    for (int i = 0; i < sizeof(notes); i++)
+      notes[i] = '\0';
+  }
+
+
+  // Basic code to read the buttons.
+  char button(char button_num)
+  {
+    return (!(digitalRead(button_num)));
+  }
+
+
+  // Button one is the the Hold button.
+  void handleButtonOne() {
+    boolean buttonOnePressed = button(BUTTON1);
+    if (buttonOnePressed) {
+      if (buttonOneHeldTime == 0)
+        buttonOneHeldTime = tick;
+
+      if (!buttonOneDown && (tick - buttonOneHeldTime > debounceTime)) {
+        buttonOneDown = true;
+        hold = !hold;
+        resetNotes();
+      }
+    }
+    else {
+      buttonOneDown = false;
+      buttonOneHeldTime = 0;
+    }
+  }
+
+  // Button two is the mode button.
+  void handleButtonTwo() {
+    boolean buttonTwoPressed = button(BUTTON2);
+    if (buttonTwoPressed) {
+      if (buttonTwoHeldTime == 0)
+        buttonTwoHeldTime = tick;
+
+      if (!buttonTwoDown && (tick - buttonTwoHeldTime > debounceTime)) {
+        buttonTwoDown = true;
+        playBeat=0;
+        mode++;
+        if (mode == MODES) {
+          mode=0;
+        }
+        arpUp = true;
+
+      }
+    }
+    else {
+      buttonTwoDown = false;
+      buttonTwoHeldTime = 0;
+    }
+  }
+
+  // button three is the reset button
+  //void handleButtonThree() {
+  //  boolean buttonThreePressed = button(BUTTON3);
+  //  if (buttonThreePressed) {
+  //    if (buttonThreeHeldTime == 0)
+  //      buttonThreeHeldTime = tick;
+  //
+  //    if (!buttonThreeDown && (tick - buttonThreeHeldTime > debounceTime)) {
+  //
+  //      buttonThreeDown = true;
+  //      resetNotes();
+  //    }
+  //  }
+  //  else {
+  //    buttonThreeDown = false;
+  //    buttonThreeHeldTime = 0;
+  //  }
+  //}
+
+
 //}
-/*************************************************END_OF_ARP_CODE_LOOP_*************/
-
-}
