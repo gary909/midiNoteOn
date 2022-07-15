@@ -1,18 +1,36 @@
  /*
-        _     _ _                   _                         _             
-  /\/\ (_) __| (_)   /\ /\___ _   _| |__   ___   __ _ _ __ __| |            
- /    \| |/ _` | |  / //_/ _ \ | | | '_ \ / _ \ / _` | '__/ _` |            
-/ /\/\ \ | (_| | | / __ \  __/ |_| | |_) | (_) | (_| | | | (_| |            
-\/    \/_|\__,_|_| \/  \/\___|\__, |_.__/ \___/ \__,_|_|  \__,_|            
-                              |___/                                         
-  ___       ___     _                      ___       _   _                  
- ( _ )     /___\___| |_ __ ___   _____    / __\_   _| |_| |_ ___  _ __  ___ 
- / _ \/\  //  // __| __/ _` \ \ / / _ \  /__\// | | | __| __/ _ \| '_ \/ __|
-| (_>  < / \_// (__| || (_| |\ V /  __/ / \/  \ |_| | |_| || (_) | | | \__ \
- \___/\/ \___/ \___|\__\__,_| \_/ \___| \_____/\__,_|\__|\__\___/|_| |_|___/
+
+  ___               _____         _   
+ / _ \             |_   _|       | |  
+/ /_\ \_ __ _ __     | | ___  ___| |_ 
+|  _  | '__| '_ \    | |/ _ \/ __| __|
+| | | | |  | |_) |   | |  __/\__ \ |_ 
+\_| |_/_|  | .__/    \_/\___||___/\__|
+           | |                        
+           |_|                        
+
 */                                                                            
                         
-/*  Helios MK2 MIDI button Keyboard with octave buttons
+/*   Arp Test V1
+ *   
+ *   Arp is semi-working, but still needs work.
+ *   
+ *   Hook up a cable or switch between RX/TX on Arduino 
+ *   
+ *   To Do:
+ *   
+ *   Re-assign conflicting buttons/pots (change midi keyboard
+ *   code rather than Arp Code
+ *   
+ *   Turn Off Arp without note hang
+ *   
+ *   Double notes in Keyboard mode
+ *   
+ *   +plus many more!
+ *   
+ *   Arp Test
+ *   
+ *   Helios MK2 MIDI button Keyboard with octave buttons
  *  v1.5 Removed uneeded serialPrint commands
  *  V1.4 Added extra octave / LED brightness updated
  *  V1.3 Fixed 13th key
@@ -22,10 +40,10 @@
  *  V1.1 Add octave Buttons
  *  V1.0 Basic Keyboard working
  *
- *  To DO:
- *  Add - Octave Buttons
- *  Add - Arp
- *  Optimise code
+ *  
+ *  Done - Octave Buttons
+ *  Done - Arp
+ *  To Do: Optimise code
  * 
     Remember: Analog pins as digital - you can't use A6 0r A7
 
